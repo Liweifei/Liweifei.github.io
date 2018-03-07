@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>关于hexo deploy出错问题 | 李韦飞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、域名解析（准确的说是主机名）来获得对应的ip地址2、发起tcp3次握手，（相当于老外问中国人，老外： Excuse me，Can you Speak English?小明： yes 。老外： OK,I want …，意思是要把暗号给对上，你得会英语我才能问）3、建立tcp链接后发起http请求4、服务器响应请求，浏览器得到相应的html代码5、浏览器解析html代码，并请求html资源6、浏览">
+  <meta name="description" content="不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：把_config.yml里面的“deploy:&amp;emsp;&amp;emsp;type: git&amp;emsp;&amp;emsp;repo: https://github.com/Liweifei/Liweifei.github.io.git&amp;emsp;&amp;emsp;branch: master”改为“dep">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于hexo deploy出错问题">
 <meta property="og:url" content="http://yoursite.com/2018/03/07/关于hexo-deploy出错问题/index.html">
 <meta property="og:site_name" content="李韦飞的博客">
-<meta property="og:description" content="1、域名解析（准确的说是主机名）来获得对应的ip地址2、发起tcp3次握手，（相当于老外问中国人，老外： Excuse me，Can you Speak English?小明： yes 。老外： OK,I want …，意思是要把暗号给对上，你得会英语我才能问）3、建立tcp链接后发起http请求4、服务器响应请求，浏览器得到相应的html代码5、浏览器解析html代码，并请求html资源6、浏览">
-<meta property="og:updated_time" content="2018-03-07T15:21:12.192Z">
+<meta property="og:description" content="不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：把_config.yml里面的“deploy:&amp;emsp;&amp;emsp;type: git&amp;emsp;&amp;emsp;repo: https://github.com/Liweifei/Liweifei.github.io.git&amp;emsp;&amp;emsp;branch: master”改为“dep">
+<meta property="og:updated_time" content="2018-03-07T15:39:34.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于hexo deploy出错问题">
-<meta name="twitter:description" content="1、域名解析（准确的说是主机名）来获得对应的ip地址2、发起tcp3次握手，（相当于老外问中国人，老外： Excuse me，Can you Speak English?小明： yes 。老外： OK,I want …，意思是要把暗号给对上，你得会英语我才能问）3、建立tcp链接后发起http请求4、服务器响应请求，浏览器得到相应的html代码5、浏览器解析html代码，并请求html资源6、浏览">
+<meta name="twitter:description" content="不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：把_config.yml里面的“deploy:&amp;emsp;&amp;emsp;type: git&amp;emsp;&amp;emsp;repo: https://github.com/Liweifei/Liweifei.github.io.git&amp;emsp;&amp;emsp;branch: master”改为“dep">
   
     <link rel="alternative" href="/atom.xml" title="李韦飞的博客" type="application/atom+xml">
   
@@ -171,7 +171,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>1、</strong>域名解析（准确的说是主机名）来获得对应的ip地址<br><strong>2、</strong>发起tcp3次握手，（相当于老外问中国人，老外： Excuse me，Can you Speak English?小明： yes 。老外： OK,I want …，意思是要把暗号给对上，你得会英语我才能问）<br><strong>3、</strong>建立tcp链接后发起http请求<br><strong>4、</strong>服务器响应请求，浏览器得到相应的html代码<br><strong>5、</strong>浏览器解析html代码，并请求html资源<br><strong>6、</strong>浏览器对页面进行渲染</p>
+        <p>不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：<br>把<strong>_config.yml</strong>里面的<br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: <a href="https://github.com/Liweifei/Liweifei.github.io.git" target="_blank" rel="noopener">https://github.com/Liweifei/Liweifei.github.io.git</a><br>&emsp;&emsp;branch: master”<br><strong>改为</strong><br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: git@github.com:Liweifei/Liweifei.github.io.git<br>&emsp;&emsp;branch: master”<br><strong>重点是-&gt;repo: ？？？？</strong></p>
 
       
 

@@ -169,7 +169,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>1、</strong>域名解析（准确的说是主机名）来获得对应的ip地址<br><strong>2、</strong>发起tcp3次握手，（相当于老外问中国人，老外： Excuse me，Can you Speak English?小明： yes 。老外： OK,I want …，意思是要把暗号给对上，你得会英语我才能问）<br><strong>3、</strong>建立tcp链接后发起http请求<br><strong>4、</strong>服务器响应请求，浏览器得到相应的html代码<br><strong>5、</strong>浏览器解析html代码，并请求html资源<br><strong>6、</strong>浏览器对页面进行渲染</p>
+        <p>不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：<br>把<strong>_config.yml</strong>里面的<br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: <a href="https://github.com/Liweifei/Liweifei.github.io.git" target="_blank" rel="noopener">https://github.com/Liweifei/Liweifei.github.io.git</a><br>&emsp;&emsp;branch: master”<br><strong>改为</strong><br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: git@github.com:Liweifei/Liweifei.github.io.git<br>&emsp;&emsp;branch: master”<br><strong>重点是-&gt;repo: ？？？？</strong></p>
 
       
 
