@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-07T15:39:34.725Z</updated>
+  <updated>2018-03-06T15:14:05.827Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>关于hexo deploy出错问题</title>
-    <link href="http://yoursite.com/2018/03/07/%E5%85%B3%E4%BA%8Ehexo-deploy%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2018/03/07/关于hexo-deploy出错问题/</id>
-    <published>2018-03-07T15:20:46.000Z</published>
-    <updated>2018-03-07T15:39:34.725Z</updated>
-    
-    <content type="html"><![CDATA[<p>不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：<br>把<strong>_config.yml</strong>里面的<br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: <a href="https://github.com/Liweifei/Liweifei.github.io.git" target="_blank" rel="noopener">https://github.com/Liweifei/Liweifei.github.io.git</a><br>&emsp;&emsp;branch: master”<br><strong>改为</strong><br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: git@github.com:Liweifei/Liweifei.github.io.git<br>&emsp;&emsp;branch: master”<br><strong>重点是-&gt;repo: ？？？？</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：&lt;br&gt;把&lt;strong&gt;_config.yml&lt;/strong&gt;里面的&lt;br&gt;“deploy:&lt;br&gt;&amp;emsp;&amp;emsp;type: git&lt;br&gt;&amp;emsp
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>css设置图片垂直居中</title>
