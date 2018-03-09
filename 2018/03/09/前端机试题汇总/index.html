@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/3 | 李韦飞的博客</title>
+  <title>前端机试题汇总 | 李韦飞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="李韦飞的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/03/index.html">
+  <meta name="description" content="1、将字符串str=”hEllO Word”的字母大小写相互转换，并且倒叙输出，得到结果为”wORD HeLLo”。12345678var str=&amp;quot;hEllO Word&amp;quot;;var STR=&amp;quot;&amp;quot;;for(var i=0;i&amp;lt;str.length;i++)&amp;#123;	//顺序判断字母是否大写，如果是大写就转换为小写，反正亦然	STR+=/[A-Z]/.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端机试题汇总">
+<meta property="og:url" content="http://yoursite.com/2018/03/09/前端机试题汇总/index.html">
 <meta property="og:site_name" content="李韦飞的博客">
+<meta property="og:description" content="1、将字符串str=”hEllO Word”的字母大小写相互转换，并且倒叙输出，得到结果为”wORD HeLLo”。12345678var str=&amp;quot;hEllO Word&amp;quot;;var STR=&amp;quot;&amp;quot;;for(var i=0;i&amp;lt;str.length;i++)&amp;#123;	//顺序判断字母是否大写，如果是大写就转换为小写，反正亦然	STR+=/[A-Z]/.">
+<meta property="og:updated_time" content="2018-03-09T15:42:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李韦飞的博客">
+<meta name="twitter:title" content="前端机试题汇总">
+<meta name="twitter:description" content="1、将字符串str=”hEllO Word”的字母大小写相互转换，并且倒叙输出，得到结果为”wORD HeLLo”。12345678var str=&amp;quot;hEllO Word&amp;quot;;var STR=&amp;quot;&amp;quot;;for(var i=0;i&amp;lt;str.length;i++)&amp;#123;	//顺序判断字母是否大写，如果是大写就转换为小写，反正亦然	STR+=/[A-Z]/.">
   
     <link rel="alternative" href="/atom.xml" title="李韦飞的博客" type="application/atom+xml">
   
@@ -147,103 +151,157 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-前端机试题汇总" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      前端机试题汇总
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/09/前端机试题汇总/" class="archive-article-date">
+
+        
+        <a href="/2018/03/09/前端机试题汇总/" class="archive-article-date">
   	<time datetime="2018-03-09T15:24:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/前端机试题汇总/">前端机试题汇总</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1、</strong>将字符串str=”hEllO Word”的字母大小写相互转换，并且倒叙输出，得到结果为”wORD HeLLo”。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;hEllO Word&quot;;</span><br><span class="line">var STR=&quot;&quot;;</span><br><span class="line">for(var i=0;i&lt;str.length;i++)&#123;</span><br><span class="line">	//顺序判断字母是否大写，如果是大写就转换为小写，反正亦然</span><br><span class="line">	STR+=/[A-Z]/.test(str[i])?str[i].toLowerCase():str[i].toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line">STR=STR.split(&quot; &quot;).reverse();//分割为数组再对数组顺序进行颠倒</span><br><span class="line">console.log(STR.join())</span><br></pre></td></tr></table></figure></p>
+<p><strong>2、</strong>将字符串num=321进行倒叙，得到结果为123，若num=1000，则倒叙结果应该为1（字符串前的0应该去掉）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function change(get)&#123;</span><br><span class="line">	var ans=&quot;&quot;;</span><br><span class="line">	get=get.toString();</span><br><span class="line">	for(var i=get.length-1;i&gt;=0;i--)&#123;</span><br><span class="line">		ans+=get[i]</span><br><span class="line">	&#125;</span><br><span class="line">	ans=ans.replace(/^0+/g,&quot;&quot;)</span><br><span class="line">	console.log(ans)</span><br><span class="line">&#125;</span><br><span class="line">change(321);</span><br><span class="line">change(1000);</span><br></pre></td></tr></table></figure></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢您的认同！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/03/09/前端机试题汇总/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/07/关于hexo-deploy出错问题/" class="archive-article-date">
-  	<time datetime="2018-03-07T15:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/07/关于hexo-deploy出错问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于hexo deploy出错问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/07/关于hexo-deploy出错问题/">关于hexo deploy出错问题</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/06/css设置图片垂直居中/" class="archive-article-date">
-  	<time datetime="2018-03-06T14:57:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/06/css设置图片垂直居中/">css设置图片垂直居中</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -266,8 +324,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

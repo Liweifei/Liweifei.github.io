@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-06T15:14:05.827Z</updated>
+  <updated>2018-03-09T15:42:02.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端机试题汇总</title>
+    <link href="http://yoursite.com/2018/03/09/%E5%89%8D%E7%AB%AF%E6%9C%BA%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    <id>http://yoursite.com/2018/03/09/前端机试题汇总/</id>
+    <published>2018-03-09T15:24:28.000Z</published>
+    <updated>2018-03-09T15:42:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>1、</strong>将字符串str=”hEllO Word”的字母大小写相互转换，并且倒叙输出，得到结果为”wORD HeLLo”。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;hEllO Word&quot;;</span><br><span class="line">var STR=&quot;&quot;;</span><br><span class="line">for(var i=0;i&lt;str.length;i++)&#123;</span><br><span class="line">//顺序判断字母是否大写，如果是大写就转换为小写，反正亦然</span><br><span class="line">STR+=/[A-Z]/.test(str[i])?str[i].toLowerCase():str[i].toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line">STR=STR.split(&quot; &quot;).reverse();//分割为数组再对数组顺序进行颠倒</span><br><span class="line">console.log(STR.join())</span><br></pre></td></tr></table></figure></p><p><strong>2、</strong>将字符串num=321进行倒叙，得到结果为123，若num=1000，则倒叙结果应该为1（字符串前的0应该去掉）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function change(get)&#123;</span><br><span class="line">var ans=&quot;&quot;;</span><br><span class="line">get=get.toString();</span><br><span class="line">for(var i=get.length-1;i&gt;=0;i--)&#123;</span><br><span class="line">ans+=get[i]</span><br><span class="line">&#125;</span><br><span class="line">ans=ans.replace(/^0+/g,&quot;&quot;)</span><br><span class="line">console.log(ans)</span><br><span class="line">&#125;</span><br><span class="line">change(321);</span><br><span class="line">change(1000);</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;1、&lt;/strong&gt;将字符串str=”hEllO Word”的字母大小写相互转换，并且倒叙输出，得到结果为”wORD HeLLo”。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于hexo deploy出错问题</title>
+    <link href="http://yoursite.com/2018/03/07/%E5%85%B3%E4%BA%8Ehexo-deploy%E5%87%BA%E9%94%99%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/03/07/关于hexo-deploy出错问题/</id>
+    <published>2018-03-07T15:20:46.000Z</published>
+    <updated>2018-03-09T15:42:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：<br>把<strong>_config.yml</strong>里面的<br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: <a href="https://github.com/Liweifei/Liweifei.github.io.git" target="_blank" rel="noopener">https://github.com/Liweifei/Liweifei.github.io.git</a><br>&emsp;&emsp;branch: master”<br><strong>改为</strong><br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: git@github.com:Liweifei/Liweifei.github.io.git<br>&emsp;&emsp;branch: master”<br><strong>重点是-&gt;repo: ？？？？</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：&lt;br&gt;把&lt;strong&gt;_config.yml&lt;/strong&gt;里面的&lt;br&gt;“deploy:&lt;br&gt;&amp;emsp;&amp;emsp;type: git&lt;br&gt;&amp;emsp
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>css设置图片垂直居中</title>
     <link href="http://yoursite.com/2018/03/06/css%E8%AE%BE%E7%BD%AE%E5%9B%BE%E7%89%87%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"/>
     <id>http://yoursite.com/2018/03/06/css设置图片垂直居中/</id>
     <published>2018-03-06T14:57:06.000Z</published>
-    <updated>2018-03-06T15:14:05.827Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 1、在外部盒子设置 --&gt;</span><br><span class="line">&lt;div&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">//如上html结构，则：</span><br><span class="line">div&#123;</span><br><span class="line">display:table-cell;</span><br><span class="line">vertical-align:middle;</span><br><span class="line">text-align:center;//设置水平也居中</span><br><span class="line">&#125;</span><br><span class="line">img&#123;</span><br><span class="line">vertical:middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -42,7 +84,7 @@
     <link href="http://yoursite.com/2018/01/23/js%E8%B7%A8%E5%9F%9F%E4%BC%A0%E9%80%92%E4%BF%A1%E6%81%AF%E5%92%8C%E6%93%8D%E4%BD%9Cdom/"/>
     <id>http://yoursite.com/2018/01/23/js跨域传递信息和操作dom/</id>
     <published>2018-01-23T14:08:16.000Z</published>
-    <updated>2018-01-23T14:47:25.494Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1、什么是跨域？"><a href="#1、什么是跨域？" class="headerlink" title="1、什么是跨域？"></a>1、什么是跨域？</h3><p>&emsp;&emsp;不同协议（http/https）、不同域名（.com/.cn）或者是不同端口号（80/88），只要有一个不同就是跨域。</p><h3 id="2、浏览器是否允许跨域？"><a href="#2、浏览器是否允许跨域？" class="headerlink" title="2、浏览器是否允许跨域？"></a>2、浏览器是否允许跨域？</h3><p>&emsp;&emsp;javaScript出于安全考虑，不允许跨域读取数据或者是调用其它页面的对象。</p><h3 id="3、解决方法（两个域的页面都是自己开发或者经过同意可允许跨域）？"><a href="#3、解决方法（两个域的页面都是自己开发或者经过同意可允许跨域）？" class="headerlink" title="3、解决方法（两个域的页面都是自己开发或者经过同意可允许跨域）？"></a>3、解决方法（两个域的页面都是自己开发或者经过同意可允许跨域）？</h3><p>&emsp;&emsp;HTML5的<strong>postMessage</strong>（ie8+），自己测试通过。<br>&emsp;&emsp;<strong>（1）</strong>在主域A.html（也就是另外一个域的页面想要跨域操作的这个页面）进行消息发送监听，如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&quot;message&quot;,function(event)&#123;</span><br><span class="line">//event是对象，里面包含发来的数据event.data等</span><br><span class="line">//对其它窗口（域）下发来的信息</span><br><span class="line">if(event.data.type==&quot;addPane&quot;)&#123;</span><br><span class="line">//可以通过发送过来的数据的类型进行判断，符合才执行</span><br><span class="line">console.log(&quot;跨域执行输出&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><a id="more"></a><p>&emsp;&emsp;<strong>（2）</strong><br>在另一个域B.html进行消息发送，如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">document.body.onclick=function()&#123;</span><br><span class="line">top.postMessage(&quot;addPane&quot;,&quot;http://192.168.1.168/project/A.html&quot;);</span><br><span class="line">//注意：</span><br><span class="line">//这里用top.postMessage，不用window.postMessage（具体我也不太懂）</span><br><span class="line">//前一个数据是要发送的数据</span><br><span class="line">//后一个数据就是要匹配跨域发送到的地址，必须对上，我们上面说在A.html中监听，所以假设A.html的地址在这里，（localhost测试时就输入localhost对应的地址就可以了）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -62,7 +104,7 @@
     <link href="http://yoursite.com/2018/01/04/%E8%BE%93%E5%85%A5%E6%A1%86%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%A1%8C%E4%B8%8B%E5%88%92%E7%BA%BF%E6%96%B9%E6%B3%95/"/>
     <id>http://yoursite.com/2018/01/04/输入框实现多行下划线方法/</id>
     <published>2018-01-04T15:00:46.000Z</published>
-    <updated>2018-01-04T16:01:38.437Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>实现思路:</strong>主要是利用背景图片的方式来模拟下划线，比如设置<strong>line-height=16px</strong>;这个时候配合设计做一张png图，图的高度即<strong>line-height</strong>的高度。只有下面<strong>1px的线</strong>，其它是透明，设置背景为<strong>可以重复</strong>，这样就可以达到多行下划线的效果了。如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;p contenteditable=&quot;true&quot;&gt;&lt;/p&gt;//加属性使得文本可编辑</span><br><span class="line">.multipleChoice p&#123;</span><br><span class="line">       width: 88%;</span><br><span class="line">       overflow: hidden;</span><br><span class="line">       float: left;</span><br><span class="line">       height: 100%;</span><br><span class="line">       border: none;</span><br><span class="line">       outline: none;</span><br><span class="line">       line-height: 1.5rem;</span><br><span class="line">       background-image: url(../../image/decorationLine.png);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -83,7 +125,7 @@
     <link href="http://yoursite.com/2018/01/03/%E5%AE%8C%E6%95%B4%E7%9A%84http%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B/"/>
     <id>http://yoursite.com/2018/01/03/完整的http请求过程/</id>
     <published>2018-01-03T14:27:09.000Z</published>
-    <updated>2018-01-03T14:32:15.504Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>1、</strong>域名解析（准确的说是主机名）来获得对应的ip地址<br><strong>2、</strong>发起tcp3次握手，（相当于老外问中国人，老外： Excuse me，Can you Speak English?小明： yes 。老外： OK,I want …，意思是要把暗号给对上，你得会英语我才能问）<br><strong>3、</strong>建立tcp链接后发起http请求<br><strong>4、</strong>服务器响应请求，浏览器得到相应的html代码<br><strong>5、</strong>浏览器解析html代码，并请求html资源<br><strong>6、</strong>浏览器对页面进行渲染</p>]]></content>
     
@@ -104,7 +146,7 @@
     <link href="http://yoursite.com/2018/01/02/js%E5%88%A4%E6%96%AD%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%BB%9A%E5%8A%A8%E5%88%B0%E5%BA%95%E9%83%A8/"/>
     <id>http://yoursite.com/2018/01/02/js判断滚动条滚动到底部/</id>
     <published>2018-01-02T15:22:23.000Z</published>
-    <updated>2018-01-02T15:29:27.416Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;&emsp;判断依据：内容实际高度==滚动的距离+可视区域的高度？如果相等代表滚动到了底部。代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var scrollBox = document.getElementById(&quot;scrollBox&quot;);</span><br><span class="line">var trueH = scrollBox.scrollHeight, //内容高度</span><br><span class="line">scrollTop = scrollBox.scrollTop; //滚动高度</span><br><span class="line">clientH = scrollBox.clientHeight;//可视区域的高度</span><br><span class="line">if(trueH==(scrollTop+clientH))&#123;</span><br><span class="line">alert(&quot;滚动到了底部&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -125,7 +167,7 @@
     <link href="http://yoursite.com/2017/12/26/%E6%96%87%E5%AD%97%E7%9B%8A%E5%A4%84%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/"/>
     <id>http://yoursite.com/2017/12/26/文字益处显示省略号/</id>
     <published>2017-12-26T15:42:28.000Z</published>
-    <updated>2017-12-26T16:33:57.336Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;&emsp;<strong>1，单行文字溢出显示省略号</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">width:100px;//需要给个宽度</span><br><span class="line">overflow: hidden;</span><br><span class="line">text-overflow: ellipsis;//文字溢出显示省略号</span><br><span class="line">white-space: nowrap;</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>2，多行文字溢出显示省略号（支持webkit内核浏览器）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">display: -webkit-box;</span><br><span class="line">overflow: hidden;</span><br><span class="line">text-overflow: ellipsis;</span><br><span class="line">word-wrap: break-word;</span><br><span class="line">white-space: normal !important;</span><br><span class="line">-webkit-line-clamp: 2;//多少行溢出</span><br><span class="line">-webkit-box-orient: vertical;</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>3，js实现</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//利用scrollHeight和offsetHeigt属性，如果实际高度一直大于自身高度，就一直截取从后往前截取字符，直到内容不超出的时候再手动加上&quot;...&quot;</span><br><span class="line">&lt;div id=&quot;a&quot;&gt;sdfaaaaaaaaasdfaaaaaaaaasdfaaaaaaaaasdfaaaaaaaaa&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">var a=document.getElementById(&quot;a&quot;);</span><br><span class="line">while(a.scrollHeight&gt;a.offsetHeight)&#123;</span><br><span class="line">//scrollHeight包括滚动条的高度即指的是实际内容的高度   offsetHeigt指的是盒子的高度</span><br><span class="line">a.innerText=a.innerText.substring(0,a.innerText.length-1)</span><br><span class="line">if(a.scrollHeight==a.offsetHeight)&#123;</span><br><span class="line">//如果内容不超出了再截取三个字符然后加上三个“...”</span><br><span class="line">a.innerText=a.innerText.substring(0,a.innerText.length-3)+&quot;...&quot;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -146,7 +188,7 @@
     <link href="http://yoursite.com/2017/12/25/js%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%96%B9%E6%B3%95/"/>
     <id>http://yoursite.com/2017/12/25/js获取当前日期时间方法/</id>
     <published>2017-12-25T14:36:48.000Z</published>
-    <updated>2017-12-25T15:57:16.544Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;&emsp;<strong>1，获取当前时间</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var time=new Date().toLocaleTimeString();//返回形式：下午10:58:13</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>2，获取完整年份</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var year=new Date().getFullYear();</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>3，获取当前月份</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var month=new Date().getMonth()+1;//返回的是0-11,所以+1；</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>4，获取当前月份共有多少天</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var lastmonth_lastDate=new Date(new Date().getFullYear(),new Date().getMonth()+1,0);//返回上个月的最后一天</span><br><span class="line">var num=lastmonth_lastDate.getDate();//得到日期既是总数</span><br><span class="line">//第一个参数代表年份，先说第三个参数，第三个参数填0代表的是上一个月份的最后一天，也就是说这个月是12月（系统返回11，因为0-11），然后填0 意思是返回11月份的最后一天，也就是30号，所以这个时候第二个参数要+1，意思就是这个月是10月，我填11月，所以你返回10月的最后一天，最后一天也就意味着总数。最后配合获取日期数得到总数；</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>5，获取当前日</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var date=new Date().getDate();;//返回的是1-31；</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>6，获取当前是星期几</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var day=new Date().getDay()+1;//返回的是0-6，0代表星期天；</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>7，获取当前小时</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var hour=new Date().getHours();//返回的是0-23；</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>8，获取当前分钟</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var min=new Date().getMinutes();//返回的是0-59；</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>9，获取当前秒</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var sec=new Date().getSeconds();//返回的是0-23；</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -167,7 +209,7 @@
     <link href="http://yoursite.com/2017/12/21/select%E6%A0%87%E7%AD%BE%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E6%8F%90%E7%A4%BA%E5%8A%9F%E8%83%BD/"/>
     <id>http://yoursite.com/2017/12/21/select标签如何设置提示功能/</id>
     <published>2017-12-21T14:46:30.000Z</published>
-    <updated>2017-12-21T14:51:41.695Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;&emsp;我们都知道<strong>input</strong>标签等设置提示是用<strong>placeholder</strong>属性，那么<strong>select</strong>标签该如何设置类似的提示功能呢？其实就是用一个option标签设置属性”<strong>disabled selected hidden</strong>“即可，如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;select&gt;</span><br><span class="line">&lt;option value=&quot;1&quot; disabled selected hidden&gt;1&lt;/option&gt;/*具有类似提示功能*/</span><br><span class="line">&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;3&quot;&gt;4&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -188,7 +230,7 @@
     <link href="http://yoursite.com/2017/12/20/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E4%BA%8B%E4%BB%B6%E4%BB%A5%E5%8F%8A%E9%98%BB%E6%AD%A2%E5%86%92%E6%B3%A1/"/>
     <id>http://yoursite.com/2017/12/20/阻止默认事件以及阻止冒泡/</id>
     <published>2017-12-20T14:25:44.000Z</published>
-    <updated>2017-12-20T14:44:52.308Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一、什么是事件冒泡"><a href="#一、什么是事件冒泡" class="headerlink" title="一、什么是事件冒泡"></a>一、什么是事件冒泡</h3><p>&emsp;&emsp;在一个对象上触发某类事件（比如单击<strong>onclick</strong>事件），如果此对象定义了此事件的处理程序，那么此事件就会调用这个处理程序，如果没有定义此事件处理程序或者事件返回true，那么这个事件会向这个对象的父级对象传播，从里到外，直至它被处理（父级对象所有同类事件都将被激活），或者它到达了对象层次的最顶层，即<strong>document</strong>对象（有些浏览器是<strong>window</strong>）。阻止事件冒泡的方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;a&quot;).onclick=function(event)&#123;</span><br><span class="line">//event当参数传，兼容火狐</span><br><span class="line">event.stopPropagation();//兼容火狐等浏览器不兼容ie</span><br><span class="line">event.cancelBubble=true;//只兼容ie</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h3 id="二、什么是默认事件"><a href="#二、什么是默认事件" class="headerlink" title="二、什么是默认事件"></a>二、什么是默认事件</h3><p>&emsp;&emsp;有一些html元素默认的行为，比如说a标签，点击后有<strong>跳转动作</strong>；form表单中的<strong>submit</strong>类型的input有一个默认提交跳转事件；<strong>reset</strong>类型的input有重置表单行为。阻止默认事件的方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;a&quot;)[0].onclick=function(event)&#123;</span><br><span class="line">//event当参数传，兼容火狐</span><br><span class="line">event.preventDefault();</span><br><span class="line">//return false;也可以</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -209,7 +251,7 @@
     <link href="http://yoursite.com/2017/12/19/%E5%89%8D%E7%AB%AF%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2017/12/19/前端获取图片路径显示问题/</id>
     <published>2017-12-19T14:59:39.000Z</published>
-    <updated>2017-12-19T15:16:29.704Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>简述：由于安全问题，浏览器是不能获取本地图片的路径的，那么需要先展示出来应该怎么办，这里有两个办法，第一个是利用<strong>Blob</strong>对象，第二个则是<strong>FileReader（ie10+支持）</strong>对象。<br>&emsp;&emsp;<strong>1</strong>，一个<strong>Blob</strong>对象就是一个包含有只读原始数据的类文件对象.<strong>Blob</strong>对象中的数据并不一定得是JavaScript中的原生形式.<strong>File</strong>接口基于<strong>Blob</strong>,继承了<strong>Blob</strong>的功能,并且扩展支持了用户计算机上的本地文件.我们想要得到的对象URL实际上就是从<strong>Blob</strong>这个对象获取的。如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//_this指的是对应的input</span><br><span class="line">if(!_this.files)&#123;//由于ie9以下获取路劲是value的方法，所以input标签获取路劲用value</span><br><span class="line">    src=_this.value;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    f=_this.files[0];</span><br><span class="line">    var src=window.URL.createObjectURL(f)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>&emsp;&emsp;<strong>2</strong>，<strong>FileReader（ie10+支持）</strong>对象允许Web应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 File 或 Blob 对象指定要读取的文件或数据。如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//简单获取，还有很多接口可自行百度查阅</span><br><span class="line">var r= new FileReader();</span><br><span class="line">var f=_this.files[0];</span><br><span class="line">r.readAsDataURL(f);/*必须先经过这步骤=&gt;开始读取指定的Blob对象或File对象中的内容*/</span><br><span class="line">r.onload=function  (e) &#123;//读取完毕</span><br><span class="line">    var  img=document.createElement(&quot;img&quot;)</span><br><span class="line">    img.src=this.result;//事件返回</span><br><span class="line">    document.body.appendChild(img)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -230,7 +272,7 @@
     <link href="http://yoursite.com/2017/12/18/%E5%8E%9F%E7%94%9Fjs%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6/"/>
     <id>http://yoursite.com/2017/12/18/原生js滚轮事件/</id>
     <published>2017-12-18T14:50:01.000Z</published>
-    <updated>2017-12-18T15:07:59.549Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>简述：滚轮事件只有firefox比较特殊，使用<strong>DOMMouseScroll</strong>; 其他浏览器使用<strong>mousewheel</strong>，简单代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">if (document.addEventListener)&#123;</span><br><span class="line">//Firefox监听,火狐浏览器监用DOMMouseScroll来监听</span><br><span class="line">document.body.addEventListener(&quot;DOMMouseScroll&quot;,function(event)&#123;</span><br><span class="line">getEvent(event);</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line">document.body.addEventListener(&quot;mousewheel&quot;,function(event)&#123;</span><br><span class="line">//其它浏览器如谷歌用mousewheel来监听</span><br><span class="line">getEvent(event);</span><br><span class="line">&#125;)</span><br><span class="line">function getEvent(event)&#123;</span><br><span class="line">console.log(event.wheelDelta || event.detail);</span><br><span class="line">if(event.wheelDelta)&#123;//如果是mousewheel监听，则事件返回的是event.wheelDelta</span><br><span class="line">console.log(event.wheelDelta/120);//除以120是因为返回的值是120的倍数</span><br><span class="line">&#125;else&#123;</span><br><span class="line">console.log(event.wheelDelta/3);//Firefox返回值，除以3是因为返回的值是3的倍数</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><strong>总结：</strong><br>&emsp;&emsp;<strong>1</strong>，<strong>mousewheel</strong>事件中的 “<strong>event.wheelDelta</strong>”属性值：返回的值，如果是<strong>正值说明滚轮是向上滚动</strong>，如果是<strong>负值说明滚轮是向下滚动</strong>；返回的值，均为 <strong>120</strong> 的倍数，即：幅度大小 = 返回的值 / 120。<br>&emsp;&emsp;<strong>2</strong>，<strong>DOMMouseScroll</strong>事件中的 “<strong>event.detail</strong>” 属性值：返回的值，如果是<strong>负值说明滚轮是向上滚动</strong>（与 “event.wheelDelta” 正好相反），如果是正值说明滚轮是向下滚动；返回的值，均为 3 的倍数，即：幅度大小 = 返回的值 / 3。</p>]]></content>
     
@@ -251,7 +293,7 @@
     <link href="http://yoursite.com/2017/12/13/js%E8%8E%B7%E5%8F%96%E9%BC%A0%E6%A0%87%E4%BD%8D%E7%BD%AE%EF%BC%88%E5%85%BC%E5%AE%B9ie%E5%92%8Cff%EF%BC%89/"/>
     <id>http://yoursite.com/2017/12/13/js获取鼠标位置（兼容ie和ff）/</id>
     <published>2017-12-13T13:52:30.000Z</published>
-    <updated>2017-12-13T14:11:08.403Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//获取鼠标的y轴位置</span><br><span class="line">document.body.onmousemove=function(event)&#123;</span><br><span class="line">var y;</span><br><span class="line">var e=event || window.event;</span><br><span class="line">y=e.pageY?e.pageY:e.clientY+document.body.scrollTop-document.body.clientTop;//鼠标在可视区域的坐标+滚动条滚动的距离+border的高度</span><br><span class="line">return y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>如上面代码，有两个点要注意：<br>&emsp;&emsp;<strong>1</strong>，evnet对象，因为ff中默认不带event对象，所以兼容event对象需要加上作为参数传递使用，否则会不识别。<br>&emsp;&emsp;<strong>2</strong>，e.pageX,ie中是没有这种方法的，所以为了兼容则等于后面的方法。</p>]]></content>
     
@@ -272,7 +314,7 @@
     <link href="http://yoursite.com/2017/12/11/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo-github%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2017/12/11/如何使用hexo-github创建个人博客/</id>
     <published>2017-12-11T14:31:10.000Z</published>
-    <updated>2017-12-12T15:35:34.454Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>一篇关于如何使用hexo+github制作个人博客的小文章！直接进入正题！</p><p><strong>1. 什么是hexo？</strong><br>&emsp;&emsp;<strong><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></strong>是一个基于Nodejs快速简洁高效的博客框架（即它是博客速成工具）,它的文章编写采用<strong><a href="https://www.appinn.com/markdown/" target="_blank" rel="noopener">markdown</a></strong>语法，后期还可以部署到<strong><a href="https://github.com/" target="_blank" rel="noopener">github</a></strong>中使得你的博客可以直接访问。</p><a id="more"></a><p><strong>2. 环境配置</strong>（以下为必须步骤）<br>&emsp;&emsp;安装<strong><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node</a></strong>一路安装即可）<br>&emsp;&emsp;作用：用来生成静态页面的</p><p>&emsp;&emsp;GitHub（必须）</p><p>&emsp;&emsp;安装Git（必须）<br>&emsp;&emsp;作用：git仓库，管理项目，这里是把本地的hexo内容提交到github上去.</p><p><strong>3. 安装hexo</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p><p><strong>4. 初始化hexo</strong><br>&emsp;&emsp;4.1 在任意一个文件夹中：<strong>hexo init</strong>（或者：<strong>hexo init blog</strong>）<br>&emsp;&emsp;4.2 进入这个文件夹：<strong>cd blog</strong><br>&emsp;&emsp;4.3 初始化：<strong>hexo init</strong>(注意文件夹中不能有其它文件)<br>&emsp;&emsp;4.4 生成静态文件：<strong>hexo generate</strong>（或者：<strong>hexo g</strong>）<br>&emsp;&emsp;4.5 启动：<strong>hexo server</strong>（或者：<strong>hexo s</strong>）<br>&emsp;&emsp;4.6 在localhost:4000能够访问表示已经成功了</p><p><strong>5. hexo部署到Github</strong><br>5.1 建立仓库（Repository）：仓库名必须为：<strong>“你的github的id”.github.io</strong><br>5.2 修改_config.yml文件，来建立关联，命令（注意后面的三个有单个空格，格式限制），如下：<br>&emsp;deploy:</p><p>&emsp;&emsp;type: git</p><p>&emsp;&emsp;&emsp;repo: <a href="https://github.com/Liweifei/Liweifei.github.io.git" target="_blank" rel="noopener">https://github.com/Liweifei/Liweifei.github.io.git</a></p><p>   branch: master<br>5.3 执行安装<strong>hexo deploy</strong>：<strong>npm install hexo-deployer-git –save</strong><br>5.4 安装好之后执行配置命令：<strong>hexo deploy</strong><br>5.5 在浏览器输入：<a href="http://liweifei.github.io/" target="_blank" rel="noopener">http://liweifei.github.io/</a> 能访问表示成功了<br>5.6之后每次部署的步骤可以是：<br>&emsp;<strong>hexo clean</strong></p><p>&emsp;&emsp;<strong>hexo generate</strong></p><p>&emsp;&emsp;&emsp;<strong> hexo deploy</strong></p>]]></content>
     
@@ -291,7 +333,7 @@
     <link href="http://yoursite.com/2017/11/29/hello-world/"/>
     <id>http://yoursite.com/2017/11/29/hello-world/</id>
     <published>2017-11-29T15:09:42.016Z</published>
-    <updated>2017-11-29T15:09:42.018Z</updated>
+    <updated>2018-03-09T15:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     

@@ -149,6 +149,133 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-前端机试题汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/09/前端机试题汇总/">前端机试题汇总</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/09/前端机试题汇总/" class="archive-article-date">
+  	<time datetime="2018-03-09T15:24:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1、</strong>将字符串str=”hEllO Word”的字母大小写相互转换，并且倒叙输出，得到结果为”wORD HeLLo”。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;hEllO Word&quot;;</span><br><span class="line">var STR=&quot;&quot;;</span><br><span class="line">for(var i=0;i&lt;str.length;i++)&#123;</span><br><span class="line">	//顺序判断字母是否大写，如果是大写就转换为小写，反正亦然</span><br><span class="line">	STR+=/[A-Z]/.test(str[i])?str[i].toLowerCase():str[i].toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line">STR=STR.split(&quot; &quot;).reverse();//分割为数组再对数组顺序进行颠倒</span><br><span class="line">console.log(STR.join())</span><br></pre></td></tr></table></figure></p>
+<p><strong>2、</strong>将字符串num=321进行倒叙，得到结果为123，若num=1000，则倒叙结果应该为1（字符串前的0应该去掉）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function change(get)&#123;</span><br><span class="line">	var ans=&quot;&quot;;</span><br><span class="line">	get=get.toString();</span><br><span class="line">	for(var i=get.length-1;i&gt;=0;i--)&#123;</span><br><span class="line">		ans+=get[i]</span><br><span class="line">	&#125;</span><br><span class="line">	ans=ans.replace(/^0+/g,&quot;&quot;)</span><br><span class="line">	console.log(ans)</span><br><span class="line">&#125;</span><br><span class="line">change(321);</span><br><span class="line">change(1000);</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/09/前端机试题汇总/">查看全部 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-关于hexo-deploy出错问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/07/关于hexo-deploy出错问题/">关于hexo deploy出错问题</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/07/关于hexo-deploy出错问题/" class="archive-article-date">
+  	<time datetime="2018-03-07T15:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>不知道为什么，本人2017年能hexo d能正常使用的，但是过了个年不行了。之后各种百度，终于找到了解决方法：<br>把<strong>_config.yml</strong>里面的<br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: <a href="https://github.com/Liweifei/Liweifei.github.io.git" target="_blank" rel="noopener">https://github.com/Liweifei/Liweifei.github.io.git</a><br>&emsp;&emsp;branch: master”<br><strong>改为</strong><br>“deploy:<br>&emsp;&emsp;type: git<br>&emsp;&emsp;repo: git@github.com:Liweifei/Liweifei.github.io.git<br>&emsp;&emsp;branch: master”<br><strong>重点是-&gt;repo: ？？？？</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/07/关于hexo-deploy出错问题/">查看全部 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-css设置图片垂直居中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -638,134 +765,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/12/21/select标签如何设置提示功能/">查看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-阻止默认事件以及阻止冒泡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/20/阻止默认事件以及阻止冒泡/">阻止默认事件以及阻止冒泡</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/20/阻止默认事件以及阻止冒泡/" class="archive-article-date">
-  	<time datetime="2017-12-20T14:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、什么是事件冒泡"><a href="#一、什么是事件冒泡" class="headerlink" title="一、什么是事件冒泡"></a>一、什么是事件冒泡</h3><p>&emsp;&emsp;在一个对象上触发某类事件（比如单击<strong>onclick</strong>事件），如果此对象定义了此事件的处理程序，那么此事件就会调用这个处理程序，如果没有定义此事件处理程序或者事件返回true，那么这个事件会向这个对象的父级对象传播，从里到外，直至它被处理（父级对象所有同类事件都将被激活），或者它到达了对象层次的最顶层，即<strong>document</strong>对象（有些浏览器是<strong>window</strong>）。阻止事件冒泡的方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;a&quot;).onclick=function(event)&#123;</span><br><span class="line">	//event当参数传，兼容火狐</span><br><span class="line">	event.stopPropagation();//兼容火狐等浏览器不兼容ie</span><br><span class="line">	event.cancelBubble=true;//只兼容ie</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="二、什么是默认事件"><a href="#二、什么是默认事件" class="headerlink" title="二、什么是默认事件"></a>二、什么是默认事件</h3><p>&emsp;&emsp;有一些html元素默认的行为，比如说a标签，点击后有<strong>跳转动作</strong>；form表单中的<strong>submit</strong>类型的input有一个默认提交跳转事件；<strong>reset</strong>类型的input有重置表单行为。阻止默认事件的方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;a&quot;)[0].onclick=function(event)&#123;</span><br><span class="line">	//event当参数传，兼容火狐</span><br><span class="line">	event.preventDefault();</span><br><span class="line">	//return false;也可以</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/20/阻止默认事件以及阻止冒泡/">查看全部 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前端获取图片路径显示问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/19/前端获取图片路径显示问题/">前端获取图片路径显示问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/19/前端获取图片路径显示问题/" class="archive-article-date">
-  	<time datetime="2017-12-19T14:59:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>简述：由于安全问题，浏览器是不能获取本地图片的路径的，那么需要先展示出来应该怎么办，这里有两个办法，第一个是利用<strong>Blob</strong>对象，第二个则是<strong>FileReader（ie10+支持）</strong>对象。<br>&emsp;&emsp;<strong>1</strong>，一个<strong>Blob</strong>对象就是一个包含有只读原始数据的类文件对象.<strong>Blob</strong>对象中的数据并不一定得是JavaScript中的原生形式.<strong>File</strong>接口基于<strong>Blob</strong>,继承了<strong>Blob</strong>的功能,并且扩展支持了用户计算机上的本地文件.我们想要得到的对象URL实际上就是从<strong>Blob</strong>这个对象获取的。如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//_this指的是对应的input</span><br><span class="line">if(!_this.files)&#123;//由于ie9以下获取路劲是value的方法，所以input标签获取路劲用value</span><br><span class="line">    src=_this.value;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    f=_this.files[0];</span><br><span class="line">    var src=window.URL.createObjectURL(f)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;<strong>2</strong>，<strong>FileReader（ie10+支持）</strong>对象允许Web应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 File 或 Blob 对象指定要读取的文件或数据。如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//简单获取，还有很多接口可自行百度查阅</span><br><span class="line">var r= new FileReader();</span><br><span class="line">var f=_this.files[0];</span><br><span class="line">r.readAsDataURL(f);/*必须先经过这步骤=&gt;开始读取指定的Blob对象或File对象中的内容*/</span><br><span class="line">r.onload=function  (e) &#123;//读取完毕</span><br><span class="line">    var  img=document.createElement(&quot;img&quot;)</span><br><span class="line">    img.src=this.result;//事件返回</span><br><span class="line">    document.body.appendChild(img)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/19/前端获取图片路径显示问题/">查看全部 >></a>
         </p>
       
 
